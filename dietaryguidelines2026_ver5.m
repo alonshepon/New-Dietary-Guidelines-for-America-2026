@@ -1,5 +1,5 @@
 clearvars;clc; clf
-cd('/Users/alonshepon/Library/CloudStorage/GoogleDrive-alonshepon@gmail.com/My Drive/Main/Research topics/meat transition')
+cd('/Users/alonshepon/Library/CloudStorage/GoogleDrive-alonshepon@gmail.com/My Drive/Main/Research topics/meat transition/US Dietary Guidelines 2026/codes')
 
 t = tiledlayout(2,2,'Padding', 'tight', 'TileSpacing', 'compact');
 nexttile
@@ -53,7 +53,7 @@ h(2).CData(6,:) = rgb('DarkRed');
 line([0.75,6.25], [diff,diff],'Color','k','LineWidth',0.5)
 
 %add animal portion of UPFs
-ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','NOVA','Range','AL53:AL53');
+ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','diets','Range','AL53:AL53');
 ani=table2array(ani1);
 ff=rgb('SandyBrown');
 hp=fill([0.75, 0.75, 1.25,1.25],[diff,diff+ani,diff+ani,diff],ff,'FaceAlpha',0.5);
@@ -123,7 +123,7 @@ h(2).CData(6,:) = rgb('DarkRed');
 line([0.75,6.25], [diff,diff],'Color','k','LineWidth',0.5)
 
 %add animal portion of UPFs
-ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','NOVA','Range','AK53:AK53');
+ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','diets','Range','AK53:AK53');
 ani=table2array(ani1)/1000;
 ff=rgb('SandyBrown');
 hp=fill([0.75, 0.75, 1.25,1.25],[diff,diff+ani,diff+ani,diff],ff,'FaceAlpha',0.5);
@@ -190,7 +190,7 @@ h(2).CData(6,:) = rgb('DarkRed');
 line([0.75,6.25], [diff,diff],'Color','k','LineWidth',0.5)
 
 %add animal portion of UPFs
-ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','NOVA','Range','AI53:AI53');
+ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','diets','Range','AI53:AI53');
 ani=table2array(ani1)/10^4;
 ff=rgb('SandyBrown');
 hp=fill([0.75, 0.75, 1.25,1.25],[diff,diff+ani,diff+ani,diff],ff,'FaceAlpha',0.5);
@@ -272,7 +272,7 @@ h(2).CData(6,:) = rgb('DarkRed');
 line([0.75,6.25], [diff,diff],'Color','k','LineWidth',0.5)
 
 %add animal portion of UPFs
-ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','NOVA','Range','AJ53:AJ53');
+ani1 = readtable('NOVA+PROTEIN_DGA25-30_ver5.xlsx','Sheet','diets','Range','AJ53:AJ53');
 ani=table2array(ani1)/1000;
 ff=rgb('SandyBrown');
 hp=fill([0.75, 0.75, 1.25,1.25],[diff,diff+ani,diff+ani,diff],ff,'FaceAlpha',0.5);
@@ -289,4 +289,4 @@ xticklabels(x_labels);
 text(0.7, 68, 'd', 'VerticalAlignment', 'top', 'HorizontalAlignment', 'left','FontWeight','bold');
 set(gca,'Box','off')
 hold off
-print(gcf,'allImpacts.jpeg','-dpng', '-r300')
+print(gcf,'allImpacts_1.jpeg','-dpng', '-r300')
